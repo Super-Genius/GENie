@@ -792,6 +792,12 @@ end
 	}
 
 	newapifield {
+		name  = "copy",
+		kind = "filelist",
+		scope = "config",
+	}
+
+	newapifield {
 		name  = "nopch",
 		kind  = "filelist",
 		scope = "config",

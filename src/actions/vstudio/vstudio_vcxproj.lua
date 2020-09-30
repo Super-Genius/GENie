@@ -1295,6 +1295,7 @@
 
 			for _, file in ipairs(files) do
 				local prjexcluded = table.icontains(prj.excludes, file.name)
+				local prjcopy = table.icontains(prj.copy, file.name)
 				local excludedcfgs = {}
 
 				if not prjexcluded then
@@ -1309,7 +1310,11 @@
 					end
 				end
 
-				if subtype or prjexcluded or #excludedcfgs > 0 then
+				if prjcopy then
+					_p(2, '<CopyFileToFolders Include=\"%s\">', path.translate(file.name, "\\"))
+					_p(3, "<FileType>Document</FileType>")
+					_p(2, "</CopyFileToFolders>")
+				elseif subtype or prjexcluded or #excludedcfgs > 0 then
 					_p(2, '<%s Include=\"%s\">', section, path.translate(file.name, "\\"))
 
 					if prjexcluded then
