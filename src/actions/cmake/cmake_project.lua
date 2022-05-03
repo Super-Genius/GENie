@@ -233,11 +233,8 @@ function cmake.project(prj)
 
     local commonIncludes = cmake.commonRules(configurations, includestr)
     local commonDefines = cmake.commonRules(configurations, definestr)
-<<<<<<< HEAD
     local commonLinkDirs = cmake.commonRules(configurations, linkdirstr)
-=======
 
->>>>>>> 7860ea4ae5b2e398276dcdd138032c979301348e
     _p('')
 
     for _, cfg in ipairs(configurations) do
