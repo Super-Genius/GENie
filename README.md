@@ -13,20 +13,16 @@ generates project from Lua script, making applying the same settings for
 multiple projects easy.
 
 Supported project generators:
- * FASTBuild (experimental)
  * GNU Makefile
  * [JSON Compilation Database][jcdb]
  * Ninja (experimental)
- * Qbs / QtCreator (experimental)
  * Visual Studio 2010, 2012, 2013, 2015, 2017, 2019
  * XCode
 
 Download (stable)
 -----------------
 
-[![Build Status](https://travis-ci.org/bkaradzic/GENie.svg?branch=master)](https://travis-ci.org/bkaradzic/GENie)
-
-	version 1133 (commit e3015c778cb0a2cbe5097aed0b60355e83c5868b)
+	version 1160 (commit f9bd455a8439dbcb807816c0be9e4aedf5991bc3)
 
 Linux:  
 https://github.com/bkaradzic/bx/raw/master/tools/bin/linux/genie
@@ -48,7 +44,11 @@ Documentation
 -------------
 
 [Scripting Reference](https://github.com/bkaradzic/genie/blob/master/docs/scripting-reference.md#scripting-reference)  
-[Introduction to GENie - CppCon 2016](https://onedrive.live.com/view.aspx?cid=171ee76e679935c8&page=view&resid=171EE76E679935C8!139573&parId=171EE76E679935C8!18835&authkey=!AKv_SGrgJwxDGDg&app=PowerPoint)
+
+Introduction to GENie - CppCon 2016  
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=_vArtdDTrTM" 
+target="_blank"><img src="http://img.youtube.com/vi/_vArtdDTrTM/0.jpg" 
+alt="Introduction to GENie - CppCon 2016" width="640" height="480" border="0" /></a>
 
 History
 -------
@@ -138,6 +138,9 @@ of Premake 4.4 beta 5, and there is no intention to keep it compatible with it.
  - Added `UnitySupport` flag to enable Unity (Jumbo) builds in vs2019
  - Added the `jcdb` action for generating a [JSON compilation database][jcdb].
  - Added support for generating Switch/NX32 Switch/NX64 projects.
+ - Removed FASTBuild.
+ - Removed Qbs support.
+ - Added vs2022 support.
 
 build - GENie build system scripts
 ----------------------------------
