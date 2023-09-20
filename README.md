@@ -22,7 +22,7 @@ Supported project generators:
 Download (stable)
 -----------------
 
-	version 1160 (commit f9bd455a8439dbcb807816c0be9e4aedf5991bc3)
+	version 1170 (commit 22cc907a4351db46c55f73e6aa901f1b2f0c52ad)
 
 Linux:  
 https://github.com/bkaradzic/bx/raw/master/tools/bin/linux/genie
@@ -125,13 +125,13 @@ of Premake 4.4 beta 5, and there is no intention to keep it compatible with it.
  - Added `iostargetplatformversion`, `macostargetplatformversion`, and
    `tvostargetplatformversion` to specify XCode OS target version.
  - Removed the `xcode3`, and `xcode4` actions.
- - Added the `xcode8`, `xcode9`, `xcode10`, and `xcode11` actions.
+ - Added the `xcode8`, `xcode9`, `xcode10`, `xcode11` and `xcode14` actions.
  - Added `systemincludedirs` that are always searched after directories added
    using `includedirs`.
  - Added `NoRuntimeChecks` flag to disable Basic Runtime Checks in non-optimized
    Visual Studio builds.
  - Added support for Nintendo Switch projects.
- - Added flags for selecting C++ standard: `Cpp11`, `Cpp14`, `Cpp17`,
+ - Added flags for selecting C++ standard: `Cpp11`, `Cpp14`, `Cpp17`, `Cpp20`
    and `CppLatest`.
  - Added `xcodeprojectopts` and `xcodetargetopts`.
  - Added vs2019 support.
