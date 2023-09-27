@@ -40,6 +40,12 @@ Building (dev)
 	$ cd genie
 	$ make
 
+Building specific config
+-------------
+
+	# add config=, for example to build OSX fat binary x86_64 and Arm64
+	$make config=make config=releaseuniv64arm
+
 Documentation
 -------------
 

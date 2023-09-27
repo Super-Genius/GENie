@@ -41,7 +41,7 @@ clean:
 projgen:
 	$(SILENT) $(GENIE) --to=../build/$(PROJECT_TYPE).windows --os=windows $(PROJECT_TYPE)
 	$(SILENT) $(GENIE) --to=../build/$(PROJECT_TYPE).linux   --os=linux $(PROJECT_TYPE)
-	$(SILENT) $(GENIE) --to=../build/$(PROJECT_TYPE).darwin  --os=macosx --platform=universal32 $(PROJECT_TYPE)
+	$(SILENT) $(GENIE) --to=../build/$(PROJECT_TYPE).darwin  --os=macosx --platform=universal64Arm $(PROJECT_TYPE)
 	$(SILENT) $(GENIE) --to=../build/$(PROJECT_TYPE).freebsd --os=bsd $(PROJECT_TYPE)
 
 rebuild:

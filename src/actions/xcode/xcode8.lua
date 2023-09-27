@@ -91,6 +91,7 @@
 			x64         = "x86_64",
 			Universal32 = "$(ARCHS_STANDARD_32_BIT)",
 			Universal64 = "$(ARCHS_STANDARD_64_BIT)",
+			Universal64Arm = "$(ARCHS_STANDARD_64_BIT)",
 			Universal   = "$(ARCHS_STANDARD_32_64_BIT)",
 		}
 

@@ -1304,6 +1304,7 @@ _identifiers_ - list of hardware platform specifiers from this list:
 * _Universal_ - OS X universal binary, target both 32- and 64-bit versions of x86 and PPC. Automated dependency generation must be turned off, and always do a clean build. Not supported by Visual Studio.
 * _Universal32_ - like _Universal_ above, but targeting only 32-bit platforms
 * _Universal64_ - like _Universal_ above, but targeting only 64-bit platforms
+* _Universal64ARM_ - like _Universal_ above, but targeting only x86 & Arm 64-bit platforms
 * _PS3_ - Playstation 3
 * _WiiDev_ - Wii
 * _Xbox360_ - Xbox 360 compiler and linker under Visual Studio

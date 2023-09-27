@@ -38,6 +38,10 @@
 		{
 			cfgsuffix       = "univ64",
 		},
+		Universal64Arm =
+		{
+			cfgsuffix       = "univ64Arm",
+		},
 		PS3 =
 		{
 			cfgsuffix       = "ps3",

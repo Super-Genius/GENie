@@ -90,6 +90,11 @@
 			cppflags = "-MMD -MP",
 			flags    = "-arch x86_64 -arch ppc64",
 		},
+		Universal64Arm = {
+			ar       = "libtool",
+			cppflags = "-MMD -MP",
+			flags    = "-arch x86_64 -arch arm64",
+		},
 		PS3 = {
 			cc         = "ppu-lv2-g++",
 			cxx        = "ppu-lv2-g++",

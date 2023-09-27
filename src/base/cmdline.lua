@@ -68,9 +68,10 @@
 		allowed = {
 			{ "x32",         "32-bit" },
 			{ "x64",         "64-bit" },
-			{ "universal",   "Mac OS X Universal, 32- and 64-bit" },
-			{ "universal32", "Mac OS X Universal, 32-bit only" },
-			{ "universal64", "Mac OS X Universal, 64-bit only" },
+			{ "universal",   "Mac OS X Universal, 32- and 64-bit includes PPC64" },
+			{ "universal32", "Mac OS X Universal, 32-bit only includes PPC" },
+			{ "universal64", "Mac OS X Universal, 64-bit only includes PPC64" },
+			{ "universal64Arm", "Mac OS X Universal, 64-bit only includes ARM64 (M1, M2)" },
 			{ "ps3",         "Playstation 3" },
 			{ "orbis",       "Playstation 4" },
 			{ "xbox360",     "Xbox 360" },

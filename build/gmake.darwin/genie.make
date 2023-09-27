@@ -219,21 +219,21 @@ ifeq ($(config),debug)
   endef
 endif
 
-ifeq ($(config),releaseuniv32)
+ifeq ($(config),releaseuniv64arm)
   AR         = libtool
-  OBJDIR              = obj/Universal32/Release
+  OBJDIR              = obj/Universal64Arm/Release
   TARGETDIR           = ../../bin/darwin
   override TARGET              = $(TARGETDIR)/genie
   DEFINES            += -DNDEBUG -DLUA_COMPAT_MODULE -DLUA_USE_MACOSX
   INCLUDES           += -I"../../src/host/lua-5.3.0/src"
   ALL_CPPFLAGS       += $(CPPFLAGS) -MMD -MP -MP $(DEFINES) $(INCLUDES)
-  ALL_ASMFLAGS       += $(ASMFLAGS) $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -Os -arch i386 -arch ppc -m64 -mmacosx-version-min=10.6
-  ALL_CFLAGS         += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -Os -arch i386 -arch ppc -m64 -mmacosx-version-min=10.6
-  ALL_CXXFLAGS       += $(CXXFLAGS) $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -Os -arch i386 -arch ppc -m64 -mmacosx-version-min=10.6
-  ALL_OBJCFLAGS      += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -Os -arch i386 -arch ppc -m64 -mmacosx-version-min=10.6
-  ALL_OBJCPPFLAGS    += $(CXXFLAGS) $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -Os -arch i386 -arch ppc -m64 -mmacosx-version-min=10.6
+  ALL_ASMFLAGS       += $(ASMFLAGS) $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -Os -arch x86_64 -arch arm64 -m64 -mmacosx-version-min=10.6
+  ALL_CFLAGS         += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -Os -arch x86_64 -arch arm64 -m64 -mmacosx-version-min=10.6
+  ALL_CXXFLAGS       += $(CXXFLAGS) $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -Os -arch x86_64 -arch arm64 -m64 -mmacosx-version-min=10.6
+  ALL_OBJCFLAGS      += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -Os -arch x86_64 -arch arm64 -m64 -mmacosx-version-min=10.6
+  ALL_OBJCPPFLAGS    += $(CXXFLAGS) $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -Os -arch x86_64 -arch arm64 -m64 -mmacosx-version-min=10.6
   ALL_RESFLAGS       += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  ALL_LDFLAGS        += $(LDFLAGS) -L"." -arch i386 -arch ppc -mmacosx-version-min=10.6
+  ALL_LDFLAGS        += $(LDFLAGS) -L"." -arch x86_64 -arch arm64 -mmacosx-version-min=10.6
   LIBDEPS            +=
   LDDEPS             +=
   LDRESP              =
@@ -307,21 +307,21 @@ ifeq ($(config),releaseuniv32)
   endef
 endif
 
-ifeq ($(config),debuguniv32)
+ifeq ($(config),debuguniv64arm)
   AR         = libtool
-  OBJDIR              = obj/Universal32/Debug
+  OBJDIR              = obj/Universal64Arm/Debug
   TARGETDIR           = ../../bin/darwin
   override TARGET              = $(TARGETDIR)/genie
   DEFINES            += -D_DEBUG -DLUA_COMPAT_MODULE -DLUA_USE_MACOSX
   INCLUDES           += -I"../../src/host/lua-5.3.0/src"
   ALL_CPPFLAGS       += $(CPPFLAGS) -MMD -MP -MP $(DEFINES) $(INCLUDES)
-  ALL_ASMFLAGS       += $(ASMFLAGS) $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -g -arch i386 -arch ppc -m64 -mmacosx-version-min=10.6
-  ALL_CFLAGS         += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -g -arch i386 -arch ppc -m64 -mmacosx-version-min=10.6
-  ALL_CXXFLAGS       += $(CXXFLAGS) $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -g -arch i386 -arch ppc -m64 -mmacosx-version-min=10.6
-  ALL_OBJCFLAGS      += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -g -arch i386 -arch ppc -m64 -mmacosx-version-min=10.6
-  ALL_OBJCPPFLAGS    += $(CXXFLAGS) $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -g -arch i386 -arch ppc -m64 -mmacosx-version-min=10.6
+  ALL_ASMFLAGS       += $(ASMFLAGS) $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -g -arch x86_64 -arch arm64 -m64 -mmacosx-version-min=10.6
+  ALL_CFLAGS         += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -g -arch x86_64 -arch arm64 -m64 -mmacosx-version-min=10.6
+  ALL_CXXFLAGS       += $(CXXFLAGS) $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -g -arch x86_64 -arch arm64 -m64 -mmacosx-version-min=10.6
+  ALL_OBJCFLAGS      += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -g -arch x86_64 -arch arm64 -m64 -mmacosx-version-min=10.6
+  ALL_OBJCPPFLAGS    += $(CXXFLAGS) $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -Wall -Wextra -g -arch x86_64 -arch arm64 -m64 -mmacosx-version-min=10.6
   ALL_RESFLAGS       += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  ALL_LDFLAGS        += $(LDFLAGS) -L"." -arch i386 -arch ppc -mmacosx-version-min=10.6
+  ALL_LDFLAGS        += $(LDFLAGS) -L"." -arch x86_64 -arch arm64 -mmacosx-version-min=10.6
   LIBDEPS            +=
   LDDEPS             +=
   LDRESP              =
